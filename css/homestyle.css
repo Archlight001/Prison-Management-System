@@ -55,7 +55,7 @@ header {
   margin-top: 20px;
 	padding: 25px 120px 0;
 	animation: 1s fadein 0.5s forwards;
-  background-color:rgba(50,50,50,0.2) ;
+  background-color:rgba(34,45,50,0.2) ;
   opacity: 0;
   line-height:10%;
 }
@@ -69,7 +69,7 @@ header {
 .main-area{
   padding: 25px 50px;
   border-radius: 20px;
-  background-color:rgba(50,50,50,0.2) ;
+  background-color:rgba(34,45,50,0.2) ;
   opacity: 0;
   animation: 1s slidefade 1s forwards;
 }
