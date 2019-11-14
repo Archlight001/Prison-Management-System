@@ -1,0 +1,104 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	font: normal 16px sans-serif;
+	color: #fff;
+}
+
+ul,nav {
+	list-style: none;
+}
+
+a {
+  border-radius: 4px;
+  font-weight: bolder;
+  text-transform: uppercase;
+	text-decoration: none;
+  background-color:#fe072a;
+  padding: 5px 5px;
+	opacity: 0.75;
+	color: #fff;
+}
+
+a:hover {
+	opacity: 1;
+}
+
+a.btn{
+  color: #000;
+  background-color:#ffff00;
+  padding: 20px 46px;
+  margin-left:35%;
+}
+
+
+
+
+section {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 170px 80px;
+}
+
+header {
+	position: absolute;
+	width: 100%;
+  height: 10%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  margin-top: 20px;
+	padding: 25px 120px 0;
+	animation: 1s fadein 0.5s forwards;
+  background-color:rgba(50,50,50,0.2) ;
+  opacity: 0;
+  line-height:10%;
+}
+
+@keyframes fadein {
+	100% {
+		opacity: 1;
+	}
+}
+
+.main-area{
+  padding: 25px 50px;
+  border-radius: 20px;
+  background-color:rgba(50,50,50,0.2) ;
+  opacity: 0;
+  animation: 1s slidefade 1s forwards;
+}
+
+@keyframes slidefade {
+	100% {
+		opacity: 1;
+		margin: 0;
+	}
+}
+
+.main .background-image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	z-index: -1;
+	background-color: #000000;
+}
+
+.main h1 {
+	font: bold 60px "Open Sans", sans-serif;
+	margin-bottom: 15px;
+}
+
+.main h3 {
+	font: normal 28px "Open Sans", sans-serif;
+	margin-bottom: 40px;
+  text-align: center;
+}
