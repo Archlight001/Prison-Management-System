@@ -65,7 +65,7 @@
 </html>
 
 <?php
-  require ('mysql_connect.php');
+  require('mysql_connect.php');
 
   if(!$conn){
     echo "<script> alert('Could not Connect to Database');</script>";
@@ -81,7 +81,7 @@
         $_SESSION['id']= $row['ID_No'];
         $_SESSION['cLevel']= $row['Clearance_Level'];
         if(isset($_SESSION['id']) && isset($_SESSION['cLevel']) ){
-          header('Location:'.'adminPanel.php');
+          header('Location:'.'adminHome.php');
         }
       }else if($query_rows > 1){
           echo "<script> alert('Duplicate Id No found, Contact the Administrator');</script>";
