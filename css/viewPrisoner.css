@@ -1,0 +1,32 @@
+
+.mainPrisonerProfile{
+  margin: 2% 10%;
+  padding: 1% 2%;
+  border: 1px solid white;
+  color: white;
+}
+
+.mainPrisonerProfile h2{
+  text-align: center;
+}
+
+.content p{
+  display: inline;
+}
+.content label{
+  margin-top: 10px;
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.sub-content{
+  display: flex;
+  flex-direction: column;
+}
+
+img{
+  width: 17%;
+  height: 10%;
+}

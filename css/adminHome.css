@@ -1,0 +1,46 @@
+body{
+  padding: 10px;
+  color: white;
+}
+
+h2{
+  font-weight: bolder;
+}
+
+.formdecor{
+    text-align: center;
+     display: flex;
+    flex-direction: column;
+}
+input{
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 5.5%;
+}
+
+button{
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 0.5%;
+}
+#prisonerName{
+    width:50%;
+}
+
+.prisonerInfo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  border: 1px dotted white;
+  padding: 10px 45px;
+  margin-top: 15px;
+  border-radius: 10px;
+}
+
+.prisonerInfo a{
+  margin-top: 20px;
+  font-weight: bold;
+}
+.prisonerInfo label{
+  font-weight: bold;
+}
