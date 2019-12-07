@@ -28,7 +28,7 @@ if(isset($_SESSION['id']) && isset($_SESSION['cLevel'])){
         <div class="ddown-content">
           <a href="admitPrisoners.php">Admit New Prisoners</a>
           <a href="#">Release Prisoners</a>
-          <a href="#">Search Prisoner</a>
+          <a href="viewPrisoners.php">View Prisoners</a>
         </div>
       </div>
   <a href="#">Check Available Cells</a>

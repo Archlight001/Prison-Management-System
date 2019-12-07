@@ -1,0 +1,24 @@
+.viewTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.viewParameters {
+  display: flex;
+  flex-direction: row;
+}
+
+.viewParameters select,
+h5 {
+  margin-bottom: 18px;
+  margin-right: 15px;
+  margin-top: 5px;
+}
+
+.viewParameters input{
+  background-color: crimson;
+  color: white;
+  margin-bottom: 18px;
+  margin-right: 16px;
+  margin-top: 5px;
+}
