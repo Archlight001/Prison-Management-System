@@ -20,7 +20,7 @@ if (mysqli_num_rows($query_getName) > 0) {
 }
 
 echo "<form action='adminHome.php' method='POST' class='formdecor form-group'>";
-echo "<input type='text' placeholder='ENTER THE NAME OF THE PRISONER HERE' name='prisonerName' class='form-control' value='' id='prisonerName' required/>";
+echo "<input type='text' placeholder='ENTER THE NAME OF THE PRISONER HERE' name='prisonerName' class='form-control' id='prisonerName' required/>";
 echo "<button type='submit' class='btn btn-danger' name='search'>Search</button>";
 echo "</form>";
 

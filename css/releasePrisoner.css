@@ -1,0 +1,82 @@
+/* Input form Css */
+body {
+  padding: 10px;
+  color: white;
+}
+
+h2 {
+  font-weight: bolder;
+}
+
+.formdecor {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+.formdecor input {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 1.5%;
+}
+
+button {
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 0.5%;
+}
+
+#prisonerName {
+  width: 50%;
+}
+
+
+
+.mainPrisonerProfile{
+  margin: 2% 10%;
+  padding: 1% 2%;
+  border: 1px solid white;
+  color: white;
+  height: 55%;
+}
+
+.mainPrisonerProfile h2{
+  text-align: center;
+}
+
+.content p{
+  display: inline;
+}
+.content label{
+  margin-top: 10px;
+}
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content:space-between;
+}
+.sub-content{
+  display: flex;
+  flex-direction: column;
+}
+
+.image-content{
+    width:20%;
+}
+
+.image-content img{
+    width:75%;
+    height: 45%;
+}
+
+.image-content input{
+    margin-top: 20px;
+}
+.image-content button{
+    margin-top: 5px;
+    margin-left: 50px;
+}
+
+
+
+
+

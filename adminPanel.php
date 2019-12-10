@@ -26,12 +26,12 @@ if(isset($_SESSION['id']) && isset($_SESSION['cLevel'])){
           <i class="fa fa-caret-down"></i>
         </a>
         <div class="ddown-content">
+        <a href="viewPrisoners.php">View Prisoner</a>
           <a href="admitPrisoners.php">Admit New Prisoners</a>
-          <a href="#">Release Prisoners</a>
-          <a href="viewPrisoners.php">View Prisoners</a>
+          <a href="releasePrisoner.php">Release Prisoner</a>
         </div>
       </div>
-  <a href="#">Check Available Cells</a>
+  <a href="checkAvailableCells.php">Prison Info</a>
   <a href="#news">Visitors Log</a>
   <a href="adminHome.php">Home</a>
 </div>

@@ -47,7 +47,7 @@ if (isset($_POST['view'])) {
         } elseif ($viewCellNumber != "Cell Number" && $viewYear == "Year of Entry" && $viewMonth == "Month of Entry" && $viewAge == "Age" && $viewGender == "Gender") {
             $showingvalue = "Showing all Prisoners in Cell Number " . $viewCellNumber;
 
-            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Cell Number`='$viewCellNumber'");
+            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Cell Number` LIKE '%$viewCellNumber%'");
 
         } elseif ($viewAge != "Age" && $viewGender != "Gender" && $viewMonth == "Month of Entry" && $viewYear == "Year of Entry" && $viewCellNumber == "Cell Number") {
             $showingvalue = "Showing all " . $viewGender . " " . $viewAge . " year old Prisonners";
@@ -88,7 +88,7 @@ if (isset($_POST['view'])) {
         } elseif ($viewAge != "Age" && $viewGender != "Gender" && $viewMonth == "Month of Entry" && $viewYear == "Year of Entry" && $viewCellNumber != "Cell Number") {
             $showingvalue = "Showing all " . $viewGender . " " . $viewAge . " year old Prisonners in Cell Number " . $viewCellNumber;
 
-            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Age`='$viewAge' AND `Gender`='$viewGender' AND `Cell Number`='$viewCellNumber'");
+            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Age`='$viewAge' AND `Gender`='$viewGender' AND `Cell Number` LIKE '%$viewCellNumber%'");
 
         } elseif ($viewAge != "Age" && $viewGender != "Gender" && $viewMonth != "Month of Entry" && $viewYear != "Year of Entry" && $viewCellNumber == "Cell Number") {
             $dateObj = DateTime::createFromFormat('!m', $viewMonth);
@@ -104,7 +104,7 @@ if (isset($_POST['view'])) {
 
             $showingvalue = "Showing all " . $viewGender . " " . $viewAge . " year old Prisonners admitted in the month of " . $monthName . " in Cell Number " . $viewCellNumber;
 
-            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Age`='$viewAge' AND `Gender`='$viewGender' AND `Month Entered`='$viewMonth' AND `Cell Number`='$viewCellNumber'");
+            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Age`='$viewAge' AND `Gender`='$viewGender' AND `Month Entered`='$viewMonth' AND `Cell Number` LIKE '%$viewCellNumber%'");
 
         } elseif ($viewGender != "Gender" && $viewMonth != "Month of Entry" && $viewYear == "Year of Entry" && $viewAge == "Age" && $viewCellNumber == "Cell Number") {
             $dateObj = DateTime::createFromFormat('!m', $viewMonth);
@@ -122,7 +122,7 @@ if (isset($_POST['view'])) {
         } elseif ($viewGender != "Gender" && $viewMonth == "Month of Entry" && $viewYear == "Year of Entry" && $viewAge == "Age" && $viewCellNumber != "Cell Number") {
             $showingvalue = "Showing all " . $viewGender . " in Cell Number " . $viewCellNumber;
 
-            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Cell Number`='$cellNumber' AND `Gender`='$viewGender'");
+            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Cell Number` LIKE '%$viewCellNumber%' AND `Gender`='$viewGender'");
 
         } elseif ($viewGender != "Gender" && $viewMonth != "Month of Entry" && $viewYear != "Year of Entry" && $viewAge == "Age" && $viewCellNumber == "Cell Number") {
             $dateObj = DateTime::createFromFormat('!m', $viewMonth);
@@ -138,7 +138,7 @@ if (isset($_POST['view'])) {
 
             $showingvalue = "Showing all " . $viewGender . "admitted in the month of " . $monthName . " in Cell Number " . $viewCellNumber;
 
-            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Month Entered`='$viewMonth' AND `Gender`='$viewGender' AND `Cell Number`='$viewCellNumber'");
+            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Month Entered`='$viewMonth' AND `Gender`='$viewGender' AND `Cell Number` LIKE '%$viewCellNumber%'");
 
         } elseif ($viewMonth != "Month of Entry" && $viewYear != "Year of Entry" && $viewAge == "Age" && $viewGender == "Gender" && $viewCellNumber == "Cell Number") {
             $dateObj = DateTime::createFromFormat('!m', $viewMonth);
@@ -154,13 +154,13 @@ if (isset($_POST['view'])) {
 
             $showingvalue = "Showing all Prisonners admitted in the month of " . $monthName . " in Cell Number " . $viewCellNumber;
 
-            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Cell Number`='$viewCellNumber' AND `Month Entered`='$viewMonth'");
+            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Cell Number` LIKE '%$viewCellNumber%' AND `Month Entered`='$viewMonth'");
 
         } elseif ($viewYear != "Year of Entry" && $viewMonth == "Month of Entry" && $viewAge == "Age" && $viewGender == "Gender" && $viewCellNumber != "Cell Number") {
 
             $showingvalue = "Showing all Prisonners admitted in the year " . $viewYear . " in Cell Number " . $viewCellNumber;
 
-            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Cell Number`='$viewCellNumber' AND `Year Entered`='$viewYear'");
+            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Cell Number` LIKE '%$viewCellNumber%' AND `Year Entered`='$viewYear'");
 
         } elseif ($viewAge != "Age" && $viewGender != "Gender" && $viewMonth != "Month of Entry" && $viewYear != "Year of Entry" && $viewCellNumber != "Cell Number") {
             $dateObj = DateTime::createFromFormat('!m', $viewMonth);
@@ -168,7 +168,7 @@ if (isset($_POST['view'])) {
 
             $showingvalue = "Showing all " . $viewGender . " " . $viewAge . " year old Prisonners in Cell Number ".$viewCellNumber." admitted in the month of " . $monthName . " and year " . $viewYear;
 
-            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Age`='$viewAge' AND `Gender`='$viewGender' AND `Year Entered`='$viewYear' AND `Month Entered`='$viewMonth' AND `Cell Number`='$viewCellNumber' ");
+            $query = mysqli_query($conn, "SELECT * FROM `Prisonners` WHERE `Age`='$viewAge' AND `Gender`='$viewGender' AND `Year Entered`='$viewYear' AND `Month Entered`='$viewMonth' AND `Cell Number` LIKE '%$viewCellNumber%' ");
         }
     }
 
